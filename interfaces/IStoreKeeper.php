@@ -27,15 +27,15 @@ interface IStoreKeeper
     public function setCustomer(ICustomer $customer);
 
     /**
+     * @param IProduct[] $products
+     * @return void
+     */
+    public function addProducts($products);
+
+    /**
      * Забирает товары со склада.
      * @return IProduct[]
      */
     public function pickup();
-
-    /**
-     * Проверяет счет-фактуру.
-     * @return bool
-     */
-    public function checkInvoice(): bool;
 
 }
