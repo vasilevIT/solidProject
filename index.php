@@ -8,3 +8,6 @@
 
 require_once 'autoload.php';
 
+$product = new \classes\Product();
+
+print_r($product);

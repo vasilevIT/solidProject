@@ -14,5 +14,15 @@ namespace interfaces;
  */
 interface IInvoice
 {
+    /**
+     * @param integer[] $ids
+     * @return void
+     */
+    public function setProductsIds($ids);
+
+    /**
+     * @return integer[]
+     */
+    public function getProductsIds();
 
 }
