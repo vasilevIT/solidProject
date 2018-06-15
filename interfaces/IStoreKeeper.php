@@ -37,4 +37,5 @@ interface IStoreKeeper
      * @return bool
      */
     public function checkInvoice(): bool;
+
 }

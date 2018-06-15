@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: Anton Vasiliev <bysslaev@gmail.com>
  * Date: 15/06/2018
- * Time: 17:40
+ * Time: 17:47
  */
 
 namespace classes;
@@ -15,10 +15,10 @@ use interfaces\IStoreKeeper;
 use interfaces\IWarehouse;
 
 /**
- * Class MachineStoreKeeper
+ * Class HumanStoreKeeper
  * @package classes
  */
-class MachineStoreKeeper implements IStoreKeeper
+class HumanStoreKeeper implements IStoreKeeper
 {
     /** @var  IWarehouse */
     private $warehouse;
@@ -60,17 +60,10 @@ class MachineStoreKeeper implements IStoreKeeper
      */
     public function checkInvoice(): bool
     {
-        return $this->readQrCode();
-    }
-
-    /**
-     * Считывает QR код с счета-фактуры
-     * @return bool
-     */
-    public function readQrCode(): bool
-    {
-//        empty.
-        return true;
+        if (count($this->customer->getInvoice()->getProductsIds()) > 0) {
+            return true;
+        }
+        return false;
     }
 
 }
