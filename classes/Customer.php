@@ -20,6 +20,8 @@ class Customer implements ICustomer
 {
     /** @var  IInvoice */
     private $invoice;
+    /** @var  string */
+    public $name;
 
     /**
      * @param IInvoice $invoice
