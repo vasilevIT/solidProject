@@ -25,9 +25,4 @@ interface ICustomer
      */
     public function getInvoice(): IInvoice;
 
-    /**
-     * Подписывает накладную.
-     */
-    public function sign();
-
 }
