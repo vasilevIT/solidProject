@@ -32,10 +32,4 @@ interface IStoreKeeper
      */
     public function pickup();
 
-    /**
-     * Проверяет счет-фактуру.
-     * @return bool
-     */
-    public function checkInvoice(): bool;
-
 }
