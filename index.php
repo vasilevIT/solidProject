@@ -11,7 +11,9 @@ use classes\Company;
 use classes\HumanStoreKeeper;
 use classes\IndividualCustomer;
 use classes\Product;
+use classes\SaleProduct;
 use classes\SmartInvoice;
+use classes\SpecialProduct;
 use classes\Warehouse;
 
 require_once 'autoload.php';
@@ -41,11 +43,11 @@ $product->setId(3);
 $product->setPrice(300);
 $product->setName("Третий продукт");
 $humanStoreKeeper->addProducts([$product]);
-$product = new \classes\SpecialProduct();
+$product = new SpecialProduct();
 $humanStoreKeeper->addProducts([$product]);
-$product = new \classes\SpecialProduct();
+$product = new SpecialProduct();
 $humanStoreKeeper->addProducts([$product]);
-$product = new \classes\SaleProduct();
+$product = new SaleProduct();
 $humanStoreKeeper->addProducts([$product]);
 
 /** Выводим список товаров на складе. */
