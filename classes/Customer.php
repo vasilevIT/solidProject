@@ -11,12 +11,13 @@ namespace classes;
 
 use interfaces\ICustomer;
 use interfaces\IInvoice;
+use interfaces\ISigner;
 
 /**
  * Class Customer
  * @package classes
  */
-class Customer implements ICustomer
+class Customer implements ICustomer, ISigner
 {
     /** @var  IInvoice */
     private $invoice;

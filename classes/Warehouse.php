@@ -22,6 +22,15 @@ class Warehouse implements IWarehouse
     private $products;
 
     /**
+     * Warehouse constructor.
+     */
+    public function __construct()
+    {
+        $this->products = [];
+    }
+
+
+    /**
      * @return IProduct[]
      */
     public function getProducts()
@@ -37,6 +46,7 @@ class Warehouse implements IWarehouse
     {
         foreach ($this->products as $product) {
             if ($product->getId() == $id) {
+                var_dump("warehouse");
                 return $product;
             }
         }

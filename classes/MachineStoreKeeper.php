@@ -9,50 +9,12 @@
 namespace classes;
 
 
-use interfaces\ICustomer;
-use interfaces\IProduct;
-use interfaces\IStoreKeeper;
-use interfaces\IWarehouse;
-
 /**
  * Class MachineStoreKeeper
  * @package classes
  */
-class MachineStoreKeeper implements IStoreKeeper
+class MachineStoreKeeper extends StoreKeeper
 {
-    /** @var  IWarehouse */
-    private $warehouse;
-    /** @var  ICustomer */
-    private $customer;
-
-    /**
-     * @param IWarehouse $warehouse
-     */
-    public function setWarehouse(IWarehouse $warehouse)
-    {
-        $this->warehouse = $warehouse;
-    }
-
-    /**
-     * @param ICustomer $customer
-     */
-    public function setCustomer(ICustomer $customer)
-    {
-        $this->customer = $customer;
-    }
-
-    /**
-     * @return IProduct[]
-     */
-    public function pickup()
-    {
-        $ids = $this->customer->getInvoice()->getProductsIds();
-        $products = [];
-        foreach ($ids as $id) {
-            $products[] = $this->warehouse->getProduct($id);
-        }
-        return $products;
-    }
 
     /**
      * Проверяет счет-фактуру. Она не должна быть пустой.
@@ -72,5 +34,6 @@ class MachineStoreKeeper implements IStoreKeeper
 //        empty.
         return true;
     }
+
 
 }
