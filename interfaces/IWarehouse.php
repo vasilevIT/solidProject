@@ -15,4 +15,26 @@ namespace interfaces;
 interface IWarehouse
 {
 
+    /**
+     * @return IProduct[]
+     */
+    public function getProducts();
+
+    /**
+     * @param int $id
+     * @return IProduct
+     */
+    public function getProduct(int $id): IProduct;
+
+    /**
+     * @param IProduct[] $products
+     * @return void
+     */
+    public function setProducts($products);
+
+    /**
+     * @param IProduct $product
+     * @return void
+     */
+    public function setProduct(IProduct $product);
 }
