@@ -27,6 +27,12 @@ interface IStoreKeeper
     public function setCustomer(ICustomer $customer);
 
     /**
+     * @param IProduct[] $products
+     * @return void
+     */
+    public function addProducts($products);
+
+    /**
      * Забирает товары со склада.
      * @return IProduct[]
      */
