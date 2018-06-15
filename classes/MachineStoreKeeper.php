@@ -10,6 +10,7 @@ namespace classes;
 
 
 use interfaces\ICustomer;
+use interfaces\IInvoiceChecker;
 use interfaces\IProduct;
 use interfaces\IStoreKeeper;
 use interfaces\IWarehouse;
@@ -18,7 +19,7 @@ use interfaces\IWarehouse;
  * Class MachineStoreKeeper
  * @package classes
  */
-class MachineStoreKeeper implements IStoreKeeper
+class MachineStoreKeeper implements IStoreKeeper, IInvoiceChecker
 {
     /** @var  IWarehouse */
     private $warehouse;
