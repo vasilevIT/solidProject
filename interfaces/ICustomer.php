@@ -8,8 +8,26 @@
 
 namespace interfaces;
 
-
+/**
+ * Interface ICustomer
+ * @package interfaces
+ */
 interface ICustomer
 {
+    /**
+     * @param IInvoice $invoice
+     * @return void
+     */
+    public function setInvoice(IInvoice $invoice);
+
+    /**
+     * @return IInvoice
+     */
+    public function getInvoice(): IInvoice;
+
+    /**
+     * Подписывает накладную.
+     */
+    public function sign();
 
 }
