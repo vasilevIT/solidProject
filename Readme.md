@@ -1,5 +1,5 @@
-# Демонстрация SODIL принципов
-
+# Демонстрация SOLID принципов
+[![GitHub version](https://badge.fury.io/gh/vasilevIT%2FsolidProject.svg)](https://github.com/vasilevIT/solidProject/releases)
 ## Управление складом
 Данный пример демонстрирует организацию кода с использованием SOLID принципов.
 ### SOLID принципы
